@@ -74,7 +74,8 @@ body {
 .bg-section {
   width: 100%;
   aspect-ratio: 3 / 1;
-  background-image: url(images/action-athlete-ball.png);
+  /*Tuve problemas con la imagen, agarre una de google*/
+  background-image: url(https://www.costatropical.net/images/full-screen/costa-tropical/tennis-padel-costa-tropical.jpg); 
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 200px;
