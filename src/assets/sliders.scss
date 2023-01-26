@@ -1,0 +1,176 @@
+/*Estilos de sliderRight.vue*/
+.carousel__slide--right {
+  padding: clamp(15px, 5vw, 51px) 0 clamp(15px, 6vw, 73px) clamp(15px, 5vw, 51px);
+  .carousel__slide {
+    padding: 0 10px;
+    &:first-of-type{
+      padding-left: 0;
+      .carousel__item{
+        .carousel__right-img {
+        }
+        .carousel__count {
+          top: 11px;
+          left: 10%;
+        }
+      }
+    }
+    .carousel__item{
+      height: clamp(270px, 25vw ,344px);
+      width: 288px;
+      .carousel__right-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .carousel__count {
+        position: absolute;
+        top: 11px;
+        left: 10%;
+        width: clamp(20px, 3vw, 39px);
+        height: clamp(20px, 3vw, 39px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--main-color);
+        border-radius: 50%;
+        color: var(--white);
+      }
+    }
+  }
+}
+
+/*Estilos sliderLeft.vue*/
+.carousel__slide--left {
+  height: 100%;
+
+  .carousel__viewport {
+    height: 100%;
+
+    .carousel__track {
+      height: 100%;
+
+      .carousel__slide {
+        min-height: 100%;
+
+        .carousel__item {
+          height: 100%;
+          border-radius: 0;
+          position: relative;
+          min-height: 350px;
+
+          .carousel__content {
+            position: absolute;
+            width: 303px;
+            right: 0;
+            bottom: 35%;
+            text-align: left;
+            margin: clamp(10px, 3vw, 27px);
+            color: var(--white);
+
+            .carousel__h1 {
+              font-size: 50px;
+              line-height: 64px;
+              overflow-wrap: break-word;      /*Maximo*/
+              display: -webkit-box;           /*dos*/
+              -webkit-line-clamp: 2;          /*lineas*/
+              -webkit-box-orient: vertical;   /*de*/
+              overflow: hidden;               /*texto*/
+              text-overflow: ellipsis;        /*posible*/
+
+              .carousel__span {
+                font-weight: 700;
+              }
+            }
+
+            .carousel__p {
+              font-size: 18px;
+              line-height: 30px;
+              overflow-wrap: break-word;      /*Maximo*/
+              display: -webkit-box;           /*tres*/
+              -webkit-line-clamp: 3;          /*lineas*/
+              -webkit-box-orient: vertical;   /*de*/
+              overflow: hidden;               /*texto*/
+              text-overflow: ellipsis;        /*posible*/
+            }
+          }
+        }
+
+        .carousel__left-img {
+          min-height: 350px;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .carousel__next,
+  .carousel__prev {
+    position: absolute;
+    top: initial;
+    bottom: 10%;
+    box-sizing: content-box;
+    min-width: 54px;
+    min-height: 54px;
+    max-width: 54px;
+    max-height: 54px;
+    border-radius: 50%;
+    border: solid 1px #fff;
+    transform: translateX(-100%);
+
+    &:hover {
+      background-color: var(--main-color);
+      -webkit-box-shadow: 0px 5px 6px 5px rgba(0, 0, 0, 0.16);
+      box-shadow: 0px 5px 6px 5px rgba(0, 0, 0, 0.16);
+      border: 1px solid var(--main-color);
+    }
+
+    .carousel__icon {
+      filter: invert(100%);
+    }
+  }
+
+  .carousel__next {
+    left: 62%;
+
+    @media screen and (max-width:991px) {
+      left: 65%;
+    }
+  }
+
+  .carousel__prev {
+    left: 45%;
+  }
+
+  .carousel__pagination {
+    position: absolute;
+    bottom: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .carousel__pagination-item {
+      padding: 0 10px;
+
+      .carousel__pagination-button {
+        &:hover::after {
+          background-color: var(--main-color);
+        }
+
+        &::after {
+          width: 10px;
+          height: 10px;
+          background-color: white;
+          border-radius: 50%;
+
+        }
+      }
+
+      .carousel__pagination-button--active {
+        &::after {
+          background-color: var(--main-color);
+        }
+      }
+    }
+  }
+}

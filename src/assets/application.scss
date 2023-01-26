@@ -1,0 +1,139 @@
+:root {
+  /*Medidas estructurales principales*/
+  --body-width: 1437px;
+  /*Basado en el body de zepelin*/
+
+  --main-grid-padding: 5vw;
+  --main-grid-max-width: 1194px;
+  --main-grid-max-padding: 70px;
+
+  /*Colores*/
+  --main-color: #cbe346;
+  --dark: #1e2335;
+  --dark-two: #2b3049;
+  /**/
+  --white: white;
+  --muted: #787878;
+  --light: #f3f4f8;
+
+  /*Tipografías*/
+  --main-tipo: 'HelveticaNeue';
+  --tennis-ball-size: 37px;
+}
+
+body {
+  max-width: var(--body-width);
+  margin: auto;
+}
+
+.main-container {
+  margin-inline: auto;
+  /*De 15px a 70px dependiendo del vw*/
+  padding-inline: clamp(15px, var(--main-grid-padding), var(--main-grid-max-padding));
+  width: 100%;
+  max-width: var(--main-grid-max-width);
+
+  .main-container {
+    padding-inline: 0;
+  }
+}
+
+.ignore-main-container {
+  /*Contrarrestar el main-padding de ser necesario*/
+  margin-inline: calc(-1 * clamp(15px, var(--main-grid-padding), var(--main-grid-max-padding)));
+  display: block;
+}
+
+.sliders-grid__section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.sliders-grid__left {
+  flex: 2;
+  min-width: clamp(350px, 50vw, 530px);
+}
+
+.sliders-grid__right {
+  flex: 5;
+  min-width: clamp(350px, 30vw, 530px);
+}
+
+@media screen and (max-width:575px) {
+  .sliders-grid__left {
+    min-width: 300px;
+  }
+
+  .sliders-grid__right {
+    min-width: 300px;
+  }
+}
+
+.bg-section {
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  background-image: url('images/action-athlete-ball.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 200px;
+}
+
+/*Second banner styles*/
+.second-banner{
+  min-height: 392px;
+  background-color: var(--light);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: stretch;
+  @media screen and (max-width:991px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  gap: clamp(15px, 4vw, 51px);
+  padding: 80px clamp(15px, 3vw, 50px) 80px;
+}
+.second-banner__child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  &:nth-child(1){
+  }
+  &:nth-child(2){
+    min-width: clamp(260px, 40vw, 500px);
+    justify-content: space-between;
+  }
+  &:nth-child(3){
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+}
+
+.second-banner__h1 {
+  font-size: 50px;
+  line-height: 57px;
+  color: var(--dark);
+  line-break: anywhere;
+  overflow-wrap: break-word;      /*Maximo*/
+  display: -webkit-box;           /*dos*/
+  -webkit-line-clamp: 2;          /*lineas*/
+  -webkit-box-orient: vertical;   /*de*/
+  overflow: hidden;               /*texto*/
+  text-overflow: ellipsis;        /*posible*/
+}
+
+.second-banner__p {
+  font-size: 18px;
+  color: var(--muted);
+  line-height: 32px;
+}
+
+.second-banner__span {
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: right;
+  color: var(--main-color);
+  line-height: 30px;
+}

@@ -1,0 +1,41 @@
+.main-button {
+  border: 1px solid var(--white);
+  border-radius: 26.5px;
+  padding: 15px 39px 15px 30px;
+  color: var(--white);
+  text-transform: uppercase;
+  position: relative;
+  height: 53px;
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  cursor: pointer;
+  min-width: 190px;
+  max-width: 300px;
+  &::after {
+    content: '⟶';
+    margin-left: 35px;
+    font-size: 24px;
+    transform: translate(0, -5px);
+  }
+  &:hover {
+    filter: brightness(90%);
+  }
+}
+
+.main-button.invert{
+  filter: invert(100%);
+}
+
+.button-menu {
+  transform: rotateZ(90deg);
+  letter-spacing: -2px;
+  font-size: 25px;
+  font-weight: 300;
+  display: flex;
+  white-space: nowrap;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(90%);
+  }
+}
