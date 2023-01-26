@@ -8,19 +8,19 @@
     </div>
     <div class="footer__media-container">
       <a href="">
-        <img src="images/in-icon.png" alt="indeed icon png" class="footer__icon">
+        <img src="/images/in-icon.png" alt="indeed icon png" class="footer__icon">
       </a>
       <a href="">
-        <img src="images/v-icon.png" alt="v icon png" class="footer__icon">
+        <img src="/images/v-icon.png" alt="v icon png" class="footer__icon">
       </a>
       <a href="">
-        <img src="images/cam-icon.png" alt="instagram icon png" class="footer__icon">
+        <img src="/images/cam-icon.png" alt="instagram icon png" class="footer__icon">
       </a>
       <a href="">
-        <img src="images/twt-icon.png" alt="twitter icon png" class="footer__icon">
+        <img src="/images/twt-icon.png" alt="twitter icon png" class="footer__icon">
       </a>
       <a href="">
-        <img src="images/fb-icon.png" alt="facebook icon png" class="footer__icon">
+        <img src="/images/fb-icon.png" alt="facebook icon png" class="footer__icon">
       </a>
     </div>
   </footer>
