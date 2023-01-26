@@ -1,4 +1,5 @@
 <template>
+  
   <nav class="navbar__container" :class="navbarOpen ? 'navbar__left--closed' :'navbar__left--open'">
     <div class="navbar main-container">
       <div class="navbar__left">
